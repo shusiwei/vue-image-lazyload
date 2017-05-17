@@ -26,13 +26,11 @@ import 'intersection-observer';
  */
 const observer = new window.IntersectionObserver(entries => {
   for (let entrie of entries) {
-    console.log(entrie.intersectionRatio, entrie.target.getBoundingClientRect());
     if (entrie.intersectionRatio > 0.25) {
       emit(entrie.target).then(({el, cache}) => cache ? apply(el, true) : transition(el).then(el => apply(el, true))).catch(el => apply(el, false));
     };
   };
 }, {
-  root: window.document.body,
   threshold: [0, 0.25, 0.5, 0.75, 1]
 });
 
