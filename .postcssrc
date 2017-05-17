@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "autoprefixer": {
+      "browsers": [
+        "last 6 iOS versions",
+        "Firefox ESR",
+        "last 2 versions",
+        "> 5%"
+      ]
+    }
+  }
+}
