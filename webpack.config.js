@@ -42,8 +42,6 @@ module.exports = {
             loader: 'css-loader'
           }, {
             loader: 'postcss-loader'
-          }, {
-            loader: 'stylus-loader'
           }
         ],
         exclude: /node_modules/
